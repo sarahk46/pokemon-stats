@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Rationale for design decisions:</h2>
+  <p>
+    	With our visualization, we wanted to answer:
+      "How do different Pokemon of the same type(s) and generation(s) compare in terms of their key stats, specifically HP, speed, attack, and defense?"
+      While researching new Pokemon, people usually focus on a Pokemon's HP, speed, attack, and defense. So, our visualization provides an easy and simple way for people to discover a Pokemon's key stats and compare it across type(s) and generation(s). Our first two interactions allow users to select the Pokemon types and generations they want displayed in the SPLOM so there are not too many data points displayed, making it easier for users to understand the trends displayed.
+  </p>
+  <p>
+    Our first interaction has to do with selecting the Pokemon type(s).There are 18 different types, which are displayed in a color coordinated legend corresponding to the Pokemon game.  Pokemon types are a nominal data type. According to Mackinlay's Ranking, the second most effective way to display nominal types is by hue. We used the color coding the Pokemon game already used to color the types since users might already be familiar with it. Coloring the types will make it easier and faster for users to select the type(s) they want displayed. The Pokemon type color coding was found on <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a>. In case users want to compare Pokemon across multiple Pokemon types, they can use shift+click to select multiple types. To select Pokemon types, we choose clicking with the mouse pointer because it is intuitive and easy for the user to figure out.
+  </p>
+
+  <p>
+    Our second interaction allows users to select Pokemon generation(s). Initially, we wanted a drop down menu to select the generation the user wanted to display. However, we realized that by displaying the generations as a series of check boxes, we could streamline the dynamic query process and help the user get to actually looking at the main plot sooner.
+Pokemon generations are an ordinal data type ranging from generation 1 to 8. We previously had a bar graph that the user could brush over generations with, but we determined that it was not adding much besides extraneous information. The bar graph was serving as a glorified selection tool and did not offer much relevance to the second view in our multi-view design. Selecting multiple checkboxes allows users to select a subset of da
+  </p>
+
+  <p>
+    	The final interaction in our visualization is the scatter plot matrix (SPLOM). Since we wanted to compare the HP, speed, attack, and defense of each Pokemon with each other, using a SPLOM was the natural choice since it compares all 4 data points with each other, and displays each data points range as well. Users are able to select and dynamic query on the SPLOM by clicking or shift-clicking on the legend and checkboxes. This allows users to isolate specific data points across all the graphs to narrow their focus. In addition, users can hover over points to see more information pop up. A box tooltip containing the name of the Pokemon, their species, and their total stats (HP, speed, attack, and defense) will appear. This is a simple way for users to learn more about a specific point without cluttering the visualization.
+  </p>
+
+  <p>
+    Through our visualization we provide multiple interactions and views to provide users the ability to discover valuable insights and trends about their Pokemon based on their generation, type, HP, speed, attack, and defense.
+
+  </p>
+
+
+
+  <h2> Overview of development process: </h2>
+  <p>
+    We started the project by exploring datasets we could use for our visualization, which everyone collaborated two hours on. We initially settled on using a Kickstarter data set, which we spent 5 days working with. This dataset included information about the project name, date, fundraiser goal, and total amount fundraised. Sarah and Cleo spend two hours creating the Observable notebook, transporting the data there, and exploring the data set. Everyone met together to start exploring the data and creating initial visualizations and ideas. We spent two hours working on this, but we found the data to be messy and difficult to work with. Issues included certain variable names ending in a blank space, the dates not following the standard month-date-year format, and the dataset being extremely large. Aedan spent time researching ways to clean up the data, and went to office hours to ask questions. He was directed to find a new data set.
+  </p>
+
+  <p>
+    On day 6, we started exploring other data sets for 1-2 hours, and we settled on using the Pokemon data set. Aedan and Sarah spent an hour confirming that this new data set had good data integrity. We then came together and spent 2 hours exploring the data set and coming up with our final visualization. We decided to break our visualization into different pieces, including the drop-down, SPLOM, bar graph, brushing and selection, and porting onto GitHub. Every team member was assigned a different piece of the visualization.
+  </p>
+
+  <p>
+    We then individually and collaboratively worked on building the visualization. Faizah created the initial SPLOM using <a href="https://observablehq.com/@uwdata/interaction">the Interaction notebook</a>, which took two hours. Aedan spent an hour creating the generations bar graph in collaboration with Sarah. Cleo spent two hours creating the checkboxes for selecting generations and merging it with the other charts. Sarah spent two hours getting brushing and selecting to work together across the SPLOM and bar chart. Aedan and Sarah spend three hours creating and connecting the legend to the SPLOM and cleaning up the SPLOMs legends. Aedan spent 30 minutes collecting the colors used for the legend. Aedan, Sarah, and Cleo spent two more hours working on changing the bar graph into checkboxes and then configuring the checkboxes to also influence the selection of data.
+  </p>
+
+  <p>
+    Once each part of the visualization was complete, Sarah and Aedan spent an hour using Observable embed to embed our visualizations onto the web. Then, Sarah, Aedan, and Cleo spent two hours using HTML and CSS to discuss the final design of the website and build its appearances. They referenced
+    <a href="https://css-tricks.com/snippets/css/typewriter-effect/">this site</a>, and <a href="https://codepen.io/jaflo/pen/KHzjk">this site</a> for the appearance of dialogue box and text. Everyone spent 15-30 minutes typing up their ideas for the write-up, then Faizah spent two hours merging the ideas together on the final write-up.
+  </p>
+
+  <p>
+    Overall, we found finding a sound dataset took more time than we expected because it took using the data to find if there were problems with it. We also found designing the visualization concept and the final design appearance also took more time than expected. Finally, it took the most time to link the bar graph and SPLOM together.
+  </p>
+
+  <h2>References: </h2>
+  <ul>
+    <li> <a href="https://css-tricks.com/snippets/css/typewriter-effect/">Typewriter Effect</a> </li>
+    <li> <a href="https://codepen.io/jaflo/pen/KHzjk">Dialogue Box</a> </li>
+    <li> <a href="https://observablehq.com/@uwdata/interaction">The Interaction Notebook</a> </li>
+  </ul>
+</body>
+
+</html>

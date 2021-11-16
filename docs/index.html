@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script>
+
+  </script>
+
+  <body>
+    <h1>The Pok&#233;dex Visualizer</h1>
+    <div class = "css-typing box1">
+      <p>Looking for the tool to help you become the very best Pok&#233;mon trainer like no one ever was?
+      </p>
+      <p>How about to catch 'em all? Well, look no further than the Pok&#233;dex visualizer!</p>
+      <br>
+      <p> The Pok&#233;dex visualizer is much similar to your actual Pok&#233;dex,
+          which is a digital encyclopedia that gives information about   </p>
+      <p> all known Pok&#233;mon. Unlike the Pok&#233;dex, where entries include extraneous information, like the weight, footprint, and location, the Pok&#233;
+dex visualizer shares instead the most relevant information for you to be truly the very best. This includes information about all generations of Pokémon of each type with their speed, attack, defense, and HP compared with each other.</p>
+    <p> the Pok&#233;dex visualizer shares instead the most relevant information for you to be truly the very best.
+    </p>
+    <p>
+      This includes information about all generations of Pok&#233;mon of each type with their speed, attack, defense, and HP
+    </p>
+    <p>
+      compared with each other.
+    </p>
+
+    <br>
+    <p> To select specific generations of Pok&#233;mon, select from the checkboxes.
+    </p>
+
+    <p>Then, to choose among the different Pok&#233;mon types, click the colors on the legend (shift-click to get multiple types!).
+    </p>
+
+    <p> And voila! You can see the Pok&#233;mon of interest and their speed, attack, defense, and HP on the plot below!
+    </p>
+
+    <p> You can also hover over the points to identify specific Pok&#233;mon and learn more about them.
+    </p>
+
+    <br>
+    <p> Read more about the rationale and development process <a href="page_2.html" target="_self">here</a>!
+    </p>
+    <p>
+      Credit: <a href="https://observablehq.com/@sarahk46/pokedex-visualizer">Pokedex Visualizer by Sarah Khan, Cleo Chen, Faizah Zuberi, and Aedan McCall</a>
+    </p>
+    </div>
+
+    <br>
+    <br>
+    <div id="observablehq-viewof-checkboxes-439d0f37"></div>
+    <div id="observablehq-final_plot-439d0f37"></div>
+
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@sarahk46/pokedex-visualizer.js?v=3";
+    new Runtime().module(define, name => {
+      if (name === "final_plot") return new Inspector(document.querySelector("#observablehq-final_plot-439d0f37"));
+      if (name === "viewof checkboxes") return new Inspector(document.querySelector("#observablehq-viewof-checkboxes-439d0f37"));
+      return ["selection"].includes(name);
+    });
+    </script>
+
+
+  </body>
+</html>
